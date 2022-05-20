@@ -1,7 +1,7 @@
 import server    from "./server.js";
-import holaMundo from "./endpoints/holamundo.js";
-import testMongo from "./endpoints/testmongo.js";
+import test from "./endpoints/testmongo.js";
+import POST from "./endpoints/POST.js";
+import GET_filtered from "./endpoints/GET_filtered.js";
 
-server.get("/",holaMundo);
-server.get("/testMongo",testMongo);
-
+server.post("/mediciones", POST);
+server.get("/mediciones", GET_filtered);
