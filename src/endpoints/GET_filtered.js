@@ -1,5 +1,4 @@
 import dbclient from "../dbclient.js";
-import { ObjectId } from "mongodb";
 
 export default async function(req, res)
 {
@@ -8,7 +7,7 @@ export default async function(req, res)
   var db                     = dbclient.db(),
         medicionesCollection = db.collection("mediciones"),
         fecha_ini            = req.query.fecha_inicio,
-        fecha_fin            = req.query.fecha_finalizacion,
+        fecha_fin            = req.query.fecha_fin,
         tipos                = req.query.tipo,
         promedio             = req.query.promediar,
         filtro               = {},
